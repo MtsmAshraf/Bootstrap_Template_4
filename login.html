@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title:{
+                    text: "My First Chart in CanvasJS"              
+                },
+                data: [              
+                {
+                    // Change type to "doughnut", "line", "splineArea", etc.
+                    type: "doughnut",
+                    dataPoints: [
+                        { label: "apple",  y: 10  },
+                        { label: "orange", y: 15  },
+                        { label: "banana", y: 25  },
+                        { label: "mango",  y: 30  },
+                        { label: "grape",  y: 28  }
+                    ]
+                }
+                ]
+            });
+            chart.render();
+        }
+    </script>
+    <title>Login In</title>
+</head>
+<body class="login">
+    <main class="d-flex">
+        <div class="content p-3 ps-3 pe-3 bg-primary">
+            <div class="login-box m-5 ms-auto me-auto bg-white">
+                <div class="login-header p-4 fs-3 fw-bold text-center border-2 border-bottom" style="background-color: #eee;">
+                    Login
+                </div>
+                <form class="d-flex flex-column gap-2 p-3" action="">
+                    <input class="form-control rounded-0 rounded-start" type="email" placeholder="Email" aria-label="Email">
+                    <input class="form-control rounded-0 rounded-start" type="password" placeholder="password" aria-label="password">
+                    <div class="remember-password d-flex align-items-center gap-2">
+                        <input id="rem-pass" type="checkbox" value="true">
+                        <label for="rem-pass">Remember Password</label>
+                    </div>
+                    <div class="form-footer d-flex align-items-center justify-content-between">
+                        <a href="password.html">Forgot Password?</a>
+                        <input type="submit" value="Login" class="bg-primary text-white p-1 ps-2 pe-2 rounded border-0">
+                    </div>
+                </form>
+                <div class="login-footer p-3 d-flex flex-column gap-1 text-center border-2 border-top" style="background-color: #eee;">
+                    <a href="register.html">Need an account? Sign up!</a>
+                    <a href="index.html">Back to Dashboard</a>
+                </div>
+            </div>
+            <div class="content-footer p-3 pt-4 pb-4 d-flex flex-column align-items-center justify-content-between" style="background-color: #eee;">
+                <div class="copy">Copyright &copy; <a class="text-uppercase text-decoration-none fw-bold" style="color: #b50101;" href="https://moatasimashraf.000webhostapp.com" target="_blank">Moatasim</a> 2022</div>
+                <div class="terms-links"><a href="#">Privacy Policy</a> · <a href="#">Terms & Conditions</a></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

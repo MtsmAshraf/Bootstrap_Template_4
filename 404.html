@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title:{
+                    text: "My First Chart in CanvasJS"              
+                },
+                data: [              
+                {
+                    // Change type to "doughnut", "line", "splineArea", etc.
+                    type: "doughnut",
+                    dataPoints: [
+                        { label: "apple",  y: 10  },
+                        { label: "orange", y: 15  },
+                        { label: "banana", y: 25  },
+                        { label: "mango",  y: 30  },
+                        { label: "grape",  y: 28  }
+                    ]
+                }
+                ]
+            });
+            chart.render();
+        }
+    </script>
+    <title>404 Error</title>
+</head>
+<body class="error">
+    <main class="d-flex">
+        <div class="content p-3 ps-3 pe-3 bg-white">
+            <div class="error-box m-5 ms-auto me-auto bg-white text-center">
+                <div class="text-black-50 fs-5 img">
+                    <img src="imgs/404-error.jpg" class="w-100" alt="">
+                </div>
+                <p class="fs-5 fw-light">This requested URL was not found on this server.</p>
+                <a href="index.html"><i class="fa-solid fa-arrow-left me-2"></i><span>Return to Dashboard</span></a>
+            </div>
+            <div class="content-footer p-3 pt-4 pb-4 d-flex flex-column align-items-center justify-content-between" style="background-color: #eee;">
+                <div class="copy">Copyright &copy; <a class="text-uppercase text-decoration-none fw-bold" style="color: #b50101;" href="https://moatasimashraf.000webhostapp.com" target="_blank">Moatasim</a> 2022</div>
+                <div class="terms-links"><a href="#">Privacy Policy</a> · <a href="#">Terms & Conditions</a></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

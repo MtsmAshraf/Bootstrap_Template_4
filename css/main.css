@@ -1,0 +1,221 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: var(--main-transition);
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:#0d6efd;
+    --main-transition: all 0.1s 0s linear;
+}
+/* start navbar */
+.navbar{
+    position: sticky;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+.static-nav .navbar{
+    position: relative;
+}
+.dropdown-menu{
+    transform: translate(-70%, 10px);
+}
+/* end navbar */
+/* start main */
+main{
+    position: relative;
+}
+/* start aside */
+aside{
+    position: sticky !important;
+    height: 100vh;
+    left: 0;
+    top: 56px;
+    width: 300px;
+    padding: 20px;
+    overflow: hidden;
+    z-index: 2  ;
+}
+.static-nav aside{
+    position:static !important;
+    height: 140vh;
+}
+aside div{
+    min-width: 200px;
+}
+aside h6{
+    font-size: 12px;
+}
+aside .part a:hover{
+    color: white !important;
+}
+.light-side aside .part a:hover{
+    color: black !important;
+}
+aside .part span:has(i:nth-of-type(2)){
+    pointer-events: none;
+}
+aside .part {
+    cursor: pointer;
+}
+aside .part span:hover > span{
+    color: white ;
+}
+.light-side aside .part span:hover > span{
+    color: black ;
+}
+aside .part span svg:nth-of-type(2){
+    font-size: 12px;
+    margin-right: 10px;
+    margin-left: auto;
+}
+aside .part span + .part{
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+aside .part span + .part > span{
+    width: 100% !important;
+    display: block;
+}
+aside .part span + .part > span.active .part{
+    transition-duration: 0.3s;
+    height: 199px;
+}
+aside .part span + .part > span svg{
+    font-size: 12px !important;
+}
+aside .part span + .part > span.active svg{
+    transform: rotateZ(90deg);
+}
+aside .part span + .part.big .part{
+    height: 0;
+    overflow: hidden;
+}
+aside .part span.active + .part{
+    height: 80px;
+}
+aside .part span.active svg:nth-of-type(2){
+    transform: rotateZ(90deg);
+}
+aside .side-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 245px;
+    /* background-color: #2b2a2a; */
+}
+@media (max-width:992px) {
+    aside{
+        width: 0;
+        padding: 0;
+    }
+}
+/* end aside */
+/* start content */
+.content{
+    position: relative;
+    width: 100%;
+    padding-bottom: 100px !important;
+}
+.static-nav .content{
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+.static-nav .content .paragraphs{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content .row > div .bottom{
+    border-color: #aaa !important;
+    cursor: pointer;
+}
+main .content .content-footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+/* start charts */
+.chart-card{
+    border-color: #ccc !important;
+}
+.chart-card .chart-header{
+    border-color: #ccc !important;
+}
+.chart-card td{
+    border-color: #ccc !important;
+}
+.chart-content{
+    position: relative;
+    height: 400px;
+}
+.chart-content iframe{
+    position: absolute ;
+    height: 100%; 
+    width: 100%;
+}
+input:focus,
+select:focus{
+    outline: none;
+    box-shadow: 0px 0px 0px 2px var(--main-color) ;
+    transition: var(--main-transition);
+}
+table th{
+    cursor: pointer;
+}
+.table-footer li:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+.table-footer li.active{
+    background-color: var(--main-color);
+    color: white !important;
+}
+@media (max-width:767px) {
+    .the-table{
+        overflow: scroll !important;
+    }
+}
+/* end charts */
+/* end content */
+/* end main */
+.login .content{
+    height: 100vh;
+}
+.login .content .login-box{
+    width: 400px;
+    max-width: 100%;
+}
+.login .content .login-box form input[type="checkbox"]:focus{
+    box-shadow: none;
+}
+.login.sign-up .content .login-box{
+    width: 600px;
+    max-width: 100%;
+}
+.login.password .content .login-box{
+    width: 500px;
+    max-width: 100%;
+}
+.error .content{
+    height: 100vh;
+}
+.error .content .error-box{
+    width: 400px;
+    max-width: 100%;
+}
+.error .content .error-box h1{
+    font-size: 80px;
+    font-weight: lighter;
+}
+.error .content .error-box .img{
+    width: 80%;
+}
